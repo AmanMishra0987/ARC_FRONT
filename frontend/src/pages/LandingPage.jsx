@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import SquadHuntLogo from "../assets/ARC_MAIN_LOGO.png";
@@ -24,8 +24,6 @@ const LandingPage = () => {
       >
         <img src={SquadHuntLogo} alt="SquadHunt Logo" className="w-40" />
       </motion.div>
-
-      {/* Main Content - Appears After Logo Animation */}
       <AnimatePresence>
         {showContent && (
           <motion.div
@@ -34,7 +32,7 @@ const LandingPage = () => {
             transition={{ delay: 0.2, duration: 1 }}
             className="flex flex-col items-center w-full max-w-xs"
           >
-            {/* Heading */}
+            
             <motion.h1
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
